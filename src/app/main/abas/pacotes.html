@@ -1,0 +1,64 @@
+<button style="margin-top:20px;" class="btn btn-primary" ng-click="methods.export('pacotes')">Exportar para excel</button>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4" id="">
+			<h3>Aloja - {{pacoteAloja.length}}</h3>
+			<input ng-model="searchAloja" placeholder="Pesquisar...">
+			<table class="table table-bordered table-striped table-fixed">
+				<thead>
+					<tr>
+						<th>Nome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-if="!pacoteAloja.length">
+						<td><b>Nenhum resultado</b></td>
+					</tr>
+
+					<tr ng-repeat="pessoa in pacoteAloja | filter:searchAloja">
+						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<h3>Busão - {{pacoteOnibus.length}}</h3>
+			<input ng-model="searchOnibus" placeholder="Pesquisar...">
+			<table class="table table table-bordered table-striped table-fixed">
+				<thead>
+					<tr>
+						<th>Nome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-if="!pacoteOnibus.length">
+						<td><b>Nenhum resultado</b></td>
+					</tr>
+					<tr ng-repeat="pessoa in pacoteOnibus | filter:searchOnibus track by $index">
+						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<h3>Festa - {{pacoteFesta.length}}</h3>
+			<input ng-model="searchFesta" placeholder="Pesquisar...">
+			<table class="table table-bordered table-striped table-fixed">
+				<thead>
+					<tr>
+						<th>Nome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-if="!pacoteFesta.length">
+						<td><b>Nenhum resultado</b></td>
+					</tr>
+					<tr ng-repeat="pessoa in pacoteFesta | filter:searchFesta track by $index">
+						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div ng-include="'app/main/excel/pacotes.html'"></div>

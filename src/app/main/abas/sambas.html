@@ -1,0 +1,101 @@
+<button style="margin-top:20px;" class="btn btn-primary" ng-click="methods.export('sambas')">Exportar para excel</button>
+<div class="container">  
+    <div class="row">
+      <div class="col5">
+        <h3>Tamanho PP - {{sambaPP.length}}</h3>
+        <input ng-model="searchSambaPP" placeholder="Pesquisar...">
+        <table class="table table-bordered table-striped table-fixed">
+          <thead>
+            <tr>
+              <th>Nome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-if="!sambaPP.length">
+              <td><b>Nenhum resultado</b></td>
+            </tr>
+            <tr ng-repeat="nome in sambaPP | filter:searchSambaPP track by $index">
+              <td>{{nome}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col5">
+        <h3>Tamanho P - {{sambaP.length}}</h3>
+        <input ng-model="searchSambaP" placeholder="Pesquisar...">
+        <table class="table table-bordered table-striped table-fixed">
+          <thead>
+            <tr>
+              <th>Nome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-if="!sambaP.length">
+              <td><b>Nenhum resultado</b></td>
+            </tr>
+            <tr ng-repeat="nome in sambaP | filter:searchSambaP track by $index">
+              <td>{{nome}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col5">
+        <h3>Tamanho M - {{sambaM.length}}</h3>
+        <input ng-model="searchSambaM" placeholder="Pesquisar...">
+        <table class="table table-bordered table-striped table-fixed">
+          <thead>
+            <tr>
+              <th>Nome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-if="!sambaM.length">
+              <td><b>Nenhum resultado</b></td>
+            </tr>
+            <tr ng-repeat="nome in sambaM | filter:searchSambaM track by $index">
+              <td>{{nome}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col5">
+        <h3>Tamanho G - {{sambaG.length}}</h3>
+        <input ng-model="searchSambaG" placeholder="Pesquisar...">
+        <table class="table table-bordered table-striped table-fixed">
+          <thead>
+            <tr>
+              <th>Nome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-if="!sambaG.length">
+              <td><b>Nenhum resultado</b></td>
+            </tr>
+            <tr ng-repeat="nome in sambaG | filter:searchSambaG track by $index">
+              <td>{{nome}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col5">
+        <h3>Tamanho GG - {{sambaGG.length}}</h3>
+        <input ng-model="searchSambaGG" placeholder="Pesquisar...">
+        <table class="table table-bordered table-striped table-fixed">
+          <thead>
+            <tr>
+              <th>Nome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-if="!sambaGG.length">
+              <td><b>Nenhum resultado</b></td>
+            </tr>
+            <tr ng-repeat="nome in sambaGG | filter:searchSambaGG track by $index">
+              <td>{{nome}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+<div ng-include="'app/main/excel/sambas.html'"></div>

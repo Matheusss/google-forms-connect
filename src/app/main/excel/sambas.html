@@ -1,0 +1,101 @@
+<div style="visibility:hidden;">
+	<div id="exportable-sambas" style="display:inline-block;">
+		<table>
+			<thead>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Samba PP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!sambaPP.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in sambaPP | filter:searchBataPP track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Samba P</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!sambaP.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in sambaP | filter:searchBataP track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Samba M</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!sambaM.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in sambaM | filter:searchBataM track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Samba G</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!sambaG.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in sambaG | filter:searchBataG track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Samba GG</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!sambaPGG.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in sambaPGG | filter:searchBataGG track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

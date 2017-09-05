@@ -1,0 +1,201 @@
+<button style="margin-top:20px;" class="btn btn-primary" ng-click="methods.export('batas')">Exportar para excel</button>
+<div class="container">
+  <h2>Masculino</h2>
+  <div class="row">
+    <div class="col5">
+      <h3>Basquete - {{basqueteMasculino.length}}</h3>
+      <input ng-model="searchBasqueteMasc" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!basqueteMasculino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in basqueteMasculino | filter:searchBasqueteMasc track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Futebol - {{futebolMasculino.length}}</h3>
+      <input ng-model="searchFutebolMasc" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!futebolMasculino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in futebolMasculino | filter:searchFutebolMasc track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Volei - {{voleiMasculino.length}}</h3>
+      <input ng-model="searchVoleiMasc" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!voleiMasculino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in voleiMasculino | filter:searchVoleiMasc track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+        <div class="col5">
+      <h3>Handball - {{handballMasculino.length}}</h3>
+      <input ng-model="searchHandMasc" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!handballMasculino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in handballMasculino | filter:searchHandMasc track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Individuais - {{individuaisMasculino.length}}</h3>
+      <input ng-model="searchIndividuaisMasc" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!individuaisMasculino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in individuaisMasculino | filter:searchIndividuaisMasc track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+    <h2>Feminino</h2>
+  <div class="row">
+    <div class="col5">
+      <h3>Basquete - {{basqueteFeminino.length}}</h3>
+      <input ng-model="searchBasqueteFem" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!basqueteFeminino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in basqueteFeminino | filter:searchBasqueteFem track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Futebol - {{futebolFeminino.length}}</h3>
+      <input ng-model="searchFutebolFem" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!futebolFeminino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in futebolFeminino | filter:searchFutebolFem track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Volei - {{voleiFeminino.length}}</h3>
+      <input ng-model="searchVoleiFem" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!voleiFeminino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in voleiFeminino | filter:searchVoleiFem track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+        <div class="col5">
+      <h3>Handball - {{handballFeminino.length}}</h3>
+      <input ng-model="searchHandFem" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!handballFeminino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in handballFeminino | filter:searchHandFem track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Individuais - {{individuaisFeminino.length}}</h3>
+      <input ng-model="searchIndividuaisFem" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!individuaisFeminino.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in individuaisFeminino | filter:searchIndividuaisFem track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div ng-include="'app/main/excel/atletas.html'"></div>

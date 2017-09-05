@@ -1,0 +1,101 @@
+<div style="visibility:hidden;">
+	<div id="exportable-batas" style="display:inline-block;">
+		<table>
+			<thead>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Batas PP</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!batasPP.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in batasPP | filter:searchBataPP track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Batas P</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!batasP.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in batasP | filter:searchBataP track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Batas M</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!batasM.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in batasM | filter:searchBataM track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					<td>
+						<table width="100%" style="border:1px solid #d2d2d2;">
+							<thead style="border-bottom:1px solid #d2d2d2;">
+								<tr>
+									<th style="padding:10px;">Batas G</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-if="!batasG.length">
+									<td><b>Nenhum resultado</b></td>
+								</tr>
+								<tr ng-repeat="nome in batasG | filter:searchBataG track by $index">
+									<td>{{nome}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td></td>
+					                    <td>
+                        <table width="100%" style="border:1px solid #d2d2d2;">
+                            <thead style="border-bottom:1px solid #d2d2d2;">
+                                <tr>
+                                    <th style="padding:10px;">Batas GG</th>
+                                </tr>
+                            </thead>
+         <tbody>
+          <tr ng-if="!batasPGG.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in batasPGG | filter:searchBataGG track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+                        </table>
+                    </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

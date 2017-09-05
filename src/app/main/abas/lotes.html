@@ -1,0 +1,64 @@
+<button style="margin-top:20px;" class="btn btn-primary" ng-click="methods.export('lotes')">Exportar para excel</button>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<h3>Promocional - {{lotePromocional.length}}</h3>
+			<input ng-model="searchPromocional" placeholder="Pesquisar...">
+			<table class="table table-bordered table-striped table-fixed">
+				<thead>
+					<tr>
+						<th>Nome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-if="!lotePromocional.length">
+						<td><b>Nenhum resultado</b></td>
+					</tr>
+
+					<tr ng-repeat="pessoa in lotePromocional | filter:searchPromocional">
+						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<h3>Lote 1 - {{lote1.length}}</h3>
+			<input ng-model="searchLote1" placeholder="Pesquisar...">
+			<table class="table table table-bordered table-striped table-fixed">
+				<thead>
+					<tr>
+						<th>Nome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-if="!lote1.length">
+						<td><b>Nenhum resultado</b></td>
+					</tr>
+					<tr ng-repeat="pessoa in lote1 | filter:searchLote1 track by $index">
+						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<h3>Lote 2 - {{lote2.length}}</h3>
+			<input ng-model="searchLote2" placeholder="Pesquisar...">
+			<table class="table table-bordered table-striped table-fixed">
+				<thead>
+					<tr>
+						<th>Nome</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-if="!lote2.length">
+						<td><b>Nenhum resultado</b></td>
+					</tr>
+					<tr ng-repeat="pessoa in lote2 | filter:searchLote2 track by $index">
+						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div ng-include="'app/main/excel/lotes.html'"></div>

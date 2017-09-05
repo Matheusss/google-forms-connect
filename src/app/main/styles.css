@@ -1,0 +1,55 @@
+#home {
+height: 100%;
+margin-top: 50px;
+}
+
+a {
+    color: red;
+}
+
+a:hover {
+    color: darkred;
+}
+
+h3 {
+    display: block;
+    /*float: left;*/
+    margin-right: 20px;
+}
+
+input {
+        /*margin-top: 20px;*/
+    margin-bottom: 10px;
+}
+
+hr {
+    border-color:#000;
+    margin: 40px 0;
+}
+
+.table thead tr, .table tbody tr {
+    width: 100%;
+    display: block;
+}
+
+.table-fixed {
+  width: 100%;
+}
+.table-fixed tbody {
+  max-height: 700px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed td, .table-fixed th {
+  display: block;
+}
+
+.col5 {
+    width: calc(100% / 5.5);
+    display: inline-block;
+}
+
+select {
+    margin-top: 50px;
+}
+

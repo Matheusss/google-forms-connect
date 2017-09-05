@@ -1,0 +1,101 @@
+<button style="margin-top:20px;" class="btn btn-primary" ng-click="methods.export('batas')">Exportar para excel</button>
+<div class="container">
+  <div class="row">
+    <div class="col5">
+      <h3>Tamanho PP - {{batasPP.length}}</h3>
+      <input ng-model="searchBataPP" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!batasPP.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in batasPP | filter:searchBataPP track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Tamanho P - {{batasP.length}}</h3>
+      <input ng-model="searchBataP" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!batasP.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in batasP | filter:searchBataP track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Tamanho M - {{batasM.length}}</h3>
+      <input ng-model="searchBataM" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!batasM.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in batasM | filter:searchBataM track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Tamanho G - {{batasG.length}}</h3>
+      <input ng-model="searchBataG" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!batasG.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in batasG | filter:searchBataG track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col5">
+      <h3>Tamanho GG - {{batasGG.length}}</h3>
+      <input ng-model="searchBataGG" placeholder="Pesquisar...">
+      <table class="table table-bordered table-striped table-fixed">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-if="!batasGG.length">
+            <td><b>Nenhum resultado</b></td>
+          </tr>
+          <tr ng-repeat="nome in batasGG | filter:searchBataGG track by $index">
+            <td>{{nome}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div ng-include="'app/main/excel/batas.html'"></div>
