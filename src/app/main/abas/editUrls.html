@@ -1,0 +1,28 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12 no-padding">
+			<ul class="ul-list">
+				<li class="row header">
+					<div class="col-sm-12 col-md-12 col-lg-12 no-padding">
+						<div class="col-sm-5 col-md-5 col-lg-5">
+							<span>Comprador</span>
+						</div>
+						<div class="col-sm-7 col-md-7 col-lg-7">
+							<span>Url de edição</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<ul class="ul-list content">
+				<li class="row list" ng-repeat="url in urls">
+					<div class="col-sm-5 col-md-5 col-lg-5">
+						<span>{{url.nome}} - {{url.rg}}</span>
+					</div>
+					<div class="col-sm-7 col-md-7 col-lg-7 urls">
+						<a href="{{url.editUrl}}" target="_blank">{{url.editUrl}}</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
