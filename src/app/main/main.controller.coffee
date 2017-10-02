@@ -17,7 +17,10 @@ angular.module 'connectForms'
       get: ->
         HomeService.get()
         .then (result) ->
-          console.log result.data.feed.entry
+          _.each result.data.feed.entry, (entry) ->
+            console.log entry.gsx$nomedocomprador.$t if !entry.gsx$gênero.$t and entry.gsx$samba.$t
+
+
           $scope.entries = result.data.feed.entry
 
           # Pacote onibus
@@ -73,39 +76,71 @@ angular.module 'connectForms'
 
           # Batas GG
           $scope.batasGG = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$bata.$t is 'GG'
+            return entry.gsx$bata.$t is 'GG' and entry.gsx$gênero.$t is 'masculino'
           $scope.batasGG = _.map $scope.batasGG, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
-          # samba PP
-          $scope.sambaPP = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'PP'
-          $scope.sambaPP = _.map $scope.sambaPP, (entry) ->
+          # samba PP masc
+          $scope.sambaPPMasc = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'PP' and entry.gsx$gênero.$t is 'masculino'
+          $scope.sambaPPMasc = _.map $scope.sambaPPMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
-          # samba P
-          $scope.sambaP = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'P'
-          $scope.sambaP = _.map $scope.sambaP, (entry) ->
+          # samba P masc
+          $scope.sambaPMasc = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'P' and entry.gsx$gênero.$t is 'masculino'
+          $scope.sambaPMasc = _.map $scope.sambaPMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
-          # samba M
-          $scope.sambaM = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'M'
-          $scope.sambaM = _.map $scope.sambaM, (entry) ->
+          # samba M masc
+          $scope.sambaMMasc = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'M' and entry.gsx$gênero.$t is 'masculino'
+          $scope.sambaMMasc = _.map $scope.sambaMMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
-          # samba G
-          $scope.sambaG = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'G'
-          $scope.sambaG = _.map $scope.sambaG, (entry) ->
+          # samba G masc
+          $scope.sambaGMasc = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'G' and entry.gsx$gênero.$t is 'masculino'
+          $scope.sambaGMasc = _.map $scope.sambaGMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
-          # samba P
-          $scope.sambaGG = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'GG'
-          $scope.sambaGG = _.map $scope.sambaGG, (entry) ->
+          # samba GG masc
+          $scope.sambaGGMasc = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'GG' and entry.gsx$gênero.$t is 'masculino'
+          $scope.sambaGGMasc = _.map $scope.sambaGGMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
+
+           # samba PP fem
+          $scope.sambaPPFem = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'PP' and entry.gsx$gênero.$t is 'feminino'
+          $scope.sambaPPFem = _.map $scope.sambaPPFem, (entry) ->
+            return entry.gsx$nomedocomprador.$t
+
+           # samba P fem
+          $scope.sambaPFem = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'P' and entry.gsx$gênero.$t is 'feminino'
+          $scope.sambaPFem = _.map $scope.sambaPFem, (entry) ->
+            return entry.gsx$nomedocomprador.$t
+
+           # samba M fem
+          $scope.sambaMFem = _.filter  $scope.entries, (entry) ->
+             return entry.gsx$samba.$t is 'M' and entry.gsx$gênero.$t is 'feminino'
+          $scope.sambaMFem = _.map $scope.sambaMFem, (entry) ->
+            return entry.gsx$nomedocomprador.$t
+
+           # samba G fem
+          $scope.sambaGFem = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'G' and entry.gsx$gênero.$t is 'feminino'
+          $scope.sambaGFem = _.map $scope.sambaGFem, (entry) ->
+            return entry.gsx$nomedocomprador.$t
+
+           # samba GG fem
+          $scope.sambaGGFem = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$samba.$t is 'GG' and entry.gsx$gênero.$t is 'feminino'
+          $scope.sambaGGFem = _.map $scope.sambaGGFem, (entry) ->
+            return entry.gsx$nomedocomprador.$t
+
+
 
           # Lote Promocional
           $scope.lotePromocional = _.filter  $scope.entries, (entry) ->
