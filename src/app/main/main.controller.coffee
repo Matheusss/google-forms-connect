@@ -14,12 +14,25 @@ angular.module 'connectForms'
         })
         saveAs(blob, "#{aba}.xls")
 
-      get: ->
-        HomeService.get()
+      getCoqueteleiras: ->
+        HomeService.getCoqueteleiras()
         .then (result) ->
-          _.each result.data.feed.entry, (entry) ->
-            console.log entry.gsx$nomedocomprador.$t if !entry.gsx$gênero.$t and entry.gsx$samba.$t
+          $scope.coqEntries = result.data.feed.entry
 
+          $scope.coqAzul = _.filter  $scope.coqEntries, (entry) ->
+            return entry.gsx$modelo.$t is 'AZUL'
+          $scope.coqAzul = _.map $scope.coqAzul, (entry) ->
+            return entry.gsx$nomecomprador.$t
+
+          $scope.coqRosa = _.filter  $scope.coqEntries, (entry) ->
+            return entry.gsx$modelo.$t is 'ROSA'
+          $scope.coqRosa = _.map $scope.coqRosa, (entry) ->
+            return entry.gsx$nomecomprador.$t
+
+
+      getInter: ->
+        HomeService.getInter()
+        .then (result) ->
 
           $scope.entries = result.data.feed.entry
 
@@ -268,8 +281,10 @@ angular.module 'connectForms'
              editUrl: entry.gsx$editurl.$t
            }
 
-    $scope.methods.get()
+    $scope.methods.getInter()
+    $scope.methods.getCoqueteleiras()
     $interval () ->
-      $scope.methods.get()
+      $scope.methods.getInter()
+      $scope.methods.getCoqueteleiras()
     , 10000
     return
