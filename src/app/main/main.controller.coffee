@@ -89,67 +89,67 @@ angular.module 'connectForms'
 
           # Batas GG
           $scope.batasGG = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$bata.$t is 'GG' and entry.gsx$gênero.$t is 'masculino'
+            return entry.gsx$bata.$t is 'GG'
           $scope.batasGG = _.map $scope.batasGG, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
           # samba PP masc
           $scope.sambaPPMasc = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'PP' and entry.gsx$gênero.$t is 'masculino'
+            return entry.gsx$samba.$t is 'PP' and entry.gsx$gênerodasamba.$t is 'Masculino'
           $scope.sambaPPMasc = _.map $scope.sambaPPMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
           # samba P masc
           $scope.sambaPMasc = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'P' and entry.gsx$gênero.$t is 'masculino'
+            return entry.gsx$samba.$t is 'P' and entry.gsx$gênerodasamba.$t is 'Masculino'
           $scope.sambaPMasc = _.map $scope.sambaPMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
           # samba M masc
           $scope.sambaMMasc = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'M' and entry.gsx$gênero.$t is 'masculino'
+            return entry.gsx$samba.$t is 'M' and entry.gsx$gênerodasamba.$t is 'Masculino'
           $scope.sambaMMasc = _.map $scope.sambaMMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
           # samba G masc
           $scope.sambaGMasc = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'G' and entry.gsx$gênero.$t is 'masculino'
+            return entry.gsx$samba.$t is 'G' and entry.gsx$gênerodasamba.$t is 'Masculino'
           $scope.sambaGMasc = _.map $scope.sambaGMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
           # samba GG masc
           $scope.sambaGGMasc = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'GG' and entry.gsx$gênero.$t is 'masculino'
+            return entry.gsx$samba.$t is 'GG' and entry.gsx$gênerodasamba.$t is 'Masculino'
           $scope.sambaGGMasc = _.map $scope.sambaGGMasc, (entry) ->
            return entry.gsx$nomedocomprador.$t
 
            # samba PP fem
           $scope.sambaPPFem = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'PP' and entry.gsx$gênero.$t is 'feminino'
+            return entry.gsx$samba.$t is 'PP' and entry.gsx$gênerodasamba.$t is 'Feminino'
           $scope.sambaPPFem = _.map $scope.sambaPPFem, (entry) ->
             return entry.gsx$nomedocomprador.$t
 
            # samba P fem
           $scope.sambaPFem = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'P' and entry.gsx$gênero.$t is 'feminino'
+            return entry.gsx$samba.$t is 'P' and entry.gsx$gênerodasamba.$t is 'Feminino'
           $scope.sambaPFem = _.map $scope.sambaPFem, (entry) ->
             return entry.gsx$nomedocomprador.$t
 
            # samba M fem
           $scope.sambaMFem = _.filter  $scope.entries, (entry) ->
-             return entry.gsx$samba.$t is 'M' and entry.gsx$gênero.$t is 'feminino'
+             return entry.gsx$samba.$t is 'M' and entry.gsx$gênerodasamba.$t is 'Feminino'
           $scope.sambaMFem = _.map $scope.sambaMFem, (entry) ->
             return entry.gsx$nomedocomprador.$t
 
            # samba G fem
           $scope.sambaGFem = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'G' and entry.gsx$gênero.$t is 'feminino'
+            return entry.gsx$samba.$t is 'G' and entry.gsx$gênerodasamba.$t is 'Feminino'
           $scope.sambaGFem = _.map $scope.sambaGFem, (entry) ->
             return entry.gsx$nomedocomprador.$t
 
            # samba GG fem
           $scope.sambaGGFem = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$samba.$t is 'GG' and entry.gsx$gênero.$t is 'feminino'
+            return entry.gsx$samba.$t is 'GG' and entry.gsx$gênerodasamba.$t is 'Feminino'
           $scope.sambaGGFem = _.map $scope.sambaGGFem, (entry) ->
             return entry.gsx$nomedocomprador.$t
 
@@ -186,7 +186,7 @@ angular.module 'connectForms'
           $scope.basqueteMasculino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             isBasquete = esportes.search 'basquete'
-            return entry.gsx$gênero.$t is 'masculino' and (isBasquete isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'masculino' and (isBasquete isnt -1)
 
           $scope.basqueteMasculino = _.map $scope.basqueteMasculino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -195,7 +195,7 @@ angular.module 'connectForms'
           $scope.futebolMasculino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             isfutebol = esportes.search 'Futebol'
-            return entry.gsx$gênero.$t is 'masculino' and (isfutebol isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'masculino' and (isfutebol isnt -1)
 
           $scope.futebolMasculino = _.map $scope.futebolMasculino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -204,7 +204,7 @@ angular.module 'connectForms'
           $scope.voleiMasculino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             isvolei = esportes.search 'volei'
-            return entry.gsx$gênero.$t is 'masculino' and (isvolei isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'masculino' and (isvolei isnt -1)
 
           $scope.voleiMasculino = _.map $scope.voleiMasculino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -213,7 +213,7 @@ angular.module 'connectForms'
           $scope.handballMasculino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             ishandball = esportes.search 'handball'
-            return entry.gsx$gênero.$t is 'masculino' and (ishandball isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'masculino' and (ishandball isnt -1)
 
           $scope.handballMasculino = _.map $scope.handballMasculino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -222,7 +222,7 @@ angular.module 'connectForms'
           $scope.individuaisMasculino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             isindividuais = esportes.search 'INDIVIDUAIS'
-            return entry.gsx$gênero.$t is 'masculino' and (isindividuais isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'masculino' and (isindividuais isnt -1)
 
           $scope.individuaisMasculino = _.map $scope.individuaisMasculino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -232,7 +232,7 @@ angular.module 'connectForms'
           $scope.basqueteFeminino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             isBasquete = esportes.search 'basquete'
-            return entry.gsx$gênero.$t is 'feminino' and (isBasquete isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'feminino' and (isBasquete isnt -1)
 
           $scope.basqueteFeminino = _.map $scope.basqueteFeminino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -241,7 +241,7 @@ angular.module 'connectForms'
           $scope.futebolFeminino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             isfutebol = esportes.search 'Futebol'
-            return entry.gsx$gênero.$t is 'feminino' and (isfutebol isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'feminino' and (isfutebol isnt -1)
 
           $scope.futebolFeminino = _.map $scope.futebolFeminino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -250,7 +250,7 @@ angular.module 'connectForms'
           $scope.voleiFeminino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             isvolei = esportes.search 'volei'
-            return entry.gsx$gênero.$t is 'feminino' and (isvolei isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'feminino' and (isvolei isnt -1)
 
           $scope.voleiFeminino = _.map $scope.voleiFeminino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -259,7 +259,7 @@ angular.module 'connectForms'
           $scope.handballFeminino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             ishandball = esportes.search 'handball'
-            return entry.gsx$gênero.$t is 'feminino' and (ishandball isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'feminino' and (ishandball isnt -1)
 
           $scope.handballFeminino = _.map $scope.handballFeminino, (entry) ->
             return entry.gsx$nomedocomprador .$t
@@ -268,7 +268,7 @@ angular.module 'connectForms'
           $scope.individuaisFeminino = _.filter $scope.entries, (entry) ->
             esportes = entry.gsx$atleta.$t
             isindividuais = esportes.search 'INDIVIDUAIS'
-            return entry.gsx$gênero.$t is 'feminino' and (isindividuais isnt -1)
+            return entry.gsx$gênerodeatleta.$t is 'feminino' and (isindividuais isnt -1)
 
           $scope.individuaisFeminino = _.map $scope.individuaisFeminino, (entry) ->
             return entry.gsx$nomedocomprador .$t
