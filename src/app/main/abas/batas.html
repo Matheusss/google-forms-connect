@@ -14,7 +14,7 @@
           <tr ng-if="!batasPP.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in batasPP | filter:searchBataPP track by $index">
+          <tr ng-repeat="nome in batasPP | orderBy | filter:searchBataPP track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -33,7 +33,7 @@
           <tr ng-if="!batasP.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in batasP | filter:searchBataP track by $index">
+          <tr ng-repeat="nome in batasP | orderBy | filter:searchBataP track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -52,7 +52,7 @@
           <tr ng-if="!batasM.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in batasM | filter:searchBataM track by $index">
+          <tr ng-repeat="nome in batasM | orderBy | filter:searchBataM track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -71,7 +71,7 @@
           <tr ng-if="!batasG.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in batasG | filter:searchBataG track by $index">
+          <tr ng-repeat="nome in batasG | orderBy | filter:searchBataG track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -90,7 +90,7 @@
           <tr ng-if="!batasGG.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in batasGG | filter:searchBataGG track by $index">
+          <tr ng-repeat="nome in batasGG | orderBy | filter:searchBataGG track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>

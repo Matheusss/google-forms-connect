@@ -15,7 +15,7 @@
 						<td><b>Nenhum resultado</b></td>
 					</tr>
 
-					<tr ng-repeat="pessoa in lotePromocional | filter:searchPromocional">
+					<tr ng-repeat="pessoa in lotePromocional | orderBy: 'nome' | filter:searchPromocional">
 						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
 					</tr>
 				</tbody>
@@ -34,7 +34,7 @@
 					<tr ng-if="!lote1.length">
 						<td><b>Nenhum resultado</b></td>
 					</tr>
-					<tr ng-repeat="pessoa in lote1 | filter:searchLote1 track by $index">
+					<tr ng-repeat="pessoa in lote1 | orderBy: 'nome' | filter:searchLote1 track by $index">
 						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
 					</tr>
 				</tbody>
@@ -53,7 +53,7 @@
 					<tr ng-if="!lote2.length">
 						<td><b>Nenhum resultado</b></td>
 					</tr>
-					<tr ng-repeat="pessoa in lote2 | filter:searchLote2 track by $index">
+					<tr ng-repeat="pessoa in lote2 | orderBy: 'nome' | filter:searchLote2 track by $index">
 						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
 					</tr>
 				</tbody>

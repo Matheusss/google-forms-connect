@@ -14,7 +14,7 @@
 				</li>
 			</ul>
 			<ul class="ul-list content">
-				<li class="row list" ng-repeat="url in urls">
+				<li class="row list" ng-repeat="url in urls | orderBy: 'nome'">
 					<div class="col-sm-5 col-md-5 col-lg-5">
 						<span>{{url.nome}} - {{url.rg}}</span>
 					</div>

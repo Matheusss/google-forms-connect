@@ -14,7 +14,7 @@
 						<td><b>Nenhum resultado</b></td>
 					</tr>
 
-					<tr ng-repeat="pessoa in coqAzul | filter:searchCoqAzul track by $index">
+					<tr ng-repeat="pessoa in coqAzul  | orderBy | filter:searchCoqAzul track by $index">
 						<td>{{pessoa}}</td>
 					</tr>
 				</tbody>
@@ -33,7 +33,7 @@
 					<tr ng-if="!coqRosa.length">
 						<td><b>Nenhum resultado</b></td>
 					</tr>
-					<tr ng-repeat="pessoa in coqRosa | filter:searchCoqRosa track by $index">
+					<tr ng-repeat="pessoa in coqRosa  | orderBy | filter:searchCoqRosa track by $index">
 						<td>{{pessoa}}</td>
 					</tr>
 				</tbody>

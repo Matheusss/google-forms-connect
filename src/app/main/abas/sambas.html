@@ -15,7 +15,7 @@
           <tr ng-if="!sambaPPMasc.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaPPMasc | filter:searchSambaPPMasc track by $index">
+          <tr ng-repeat="nome in sambaPPMasc | orderBy | filter:searchSambaPPMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -34,7 +34,7 @@
           <tr ng-if="!sambaPMasc.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaPMasc | filter:searchSambaPMasc track by $index">
+          <tr ng-repeat="nome in sambaPMasc | orderBy | filter:searchSambaPMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -53,7 +53,7 @@
           <tr ng-if="!sambaMMasc.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaMMasc | filter:searchSambaMMasc track by $index">
+          <tr ng-repeat="nome in sambaMMasc | orderBy | filter:searchSambaMMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -72,7 +72,7 @@
           <tr ng-if="!sambaGMasc.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaGMasc | filter:searchSambaGMasc track by $index">
+          <tr ng-repeat="nome in sambaGMasc | orderBy | filter:searchSambaGMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -91,7 +91,7 @@
           <tr ng-if="!sambaGGMasc.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaGGMasc | filter:searchSambaGGMasc track by $index">
+          <tr ng-repeat="nome in sambaGGMasc | orderBy | filter:searchSambaGGMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -114,7 +114,7 @@
           <tr ng-if="!sambaPPFem.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaPPFem | filter:searchSambaPPFem track by $index">
+          <tr ng-repeat="nome in sambaPPFem | orderBy | filter:searchSambaPPFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -133,7 +133,7 @@
           <tr ng-if="!sambaPFem.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaPFem | filter:searchSambaPFem track by $index">
+          <tr ng-repeat="nome in sambaPFem | orderBy | filter:searchSambaPFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -152,7 +152,7 @@
           <tr ng-if="!sambaMFem.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaMFem | filter:searchSambaMFem track by $index">
+          <tr ng-repeat="nome in sambaMFem | orderBy | filter:searchSambaMFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -171,7 +171,7 @@
           <tr ng-if="!sambaGFem.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaGFem | filter:searchSambaGFem track by $index">
+          <tr ng-repeat="nome in sambaGFem | orderBy | filter:searchSambaGFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -190,7 +190,7 @@
           <tr ng-if="!sambaGGFem.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in sambaGGFem | filter:searchSambaGGFem track by $index">
+          <tr ng-repeat="nome in sambaGGFem | orderBy | filter:searchSambaGGFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>

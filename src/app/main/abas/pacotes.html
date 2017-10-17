@@ -15,7 +15,7 @@
 						<td><b>Nenhum resultado</b></td>
 					</tr>
 
-					<tr ng-repeat="pessoa in pacoteAloja | filter:searchAloja">
+					<tr ng-repeat="pessoa in pacoteAloja | orderBy: 'nome' | filter:searchAloja">
 						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
 					</tr>
 				</tbody>
@@ -34,7 +34,7 @@
 					<tr ng-if="!pacoteOnibus.length">
 						<td><b>Nenhum resultado</b></td>
 					</tr>
-					<tr ng-repeat="pessoa in pacoteOnibus | filter:searchOnibus track by $index">
+					<tr ng-repeat="pessoa in pacoteOnibus | orderBy: 'nome' | filter:searchOnibus track by $index">
 						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
 					</tr>
 				</tbody>
@@ -53,7 +53,7 @@
 					<tr ng-if="!pacoteFesta.length">
 						<td><b>Nenhum resultado</b></td>
 					</tr>
-					<tr ng-repeat="pessoa in pacoteFesta | filter:searchFesta track by $index">
+					<tr ng-repeat="pessoa in pacoteFesta | orderBy: 'nome' | filter:searchFesta track by $index">
 						<td>{{pessoa.nome}} - {{pessoa.rg}}</td>
 					</tr>
 				</tbody>

@@ -15,7 +15,7 @@
           <tr ng-if="!basqueteMasculino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in basqueteMasculino | filter:searchBasqueteMasc track by $index">
+          <tr ng-repeat="nome in basqueteMasculino | orderBy | filter:searchBasqueteMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -34,7 +34,7 @@
           <tr ng-if="!futebolMasculino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in futebolMasculino | filter:searchFutebolMasc track by $index">
+          <tr ng-repeat="nome in futebolMasculino | orderBy | filter:searchFutebolMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -53,7 +53,7 @@
           <tr ng-if="!voleiMasculino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in voleiMasculino | filter:searchVoleiMasc track by $index">
+          <tr ng-repeat="nome in voleiMasculino | orderBy | filter:searchVoleiMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -72,7 +72,7 @@
           <tr ng-if="!handballMasculino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in handballMasculino | filter:searchHandMasc track by $index">
+          <tr ng-repeat="nome in handballMasculino | orderBy | filter:searchHandMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -91,7 +91,7 @@
           <tr ng-if="!individuaisMasculino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in individuaisMasculino | filter:searchIndividuaisMasc track by $index">
+          <tr ng-repeat="nome in individuaisMasculino | orderBy | filter:searchIndividuaisMasc track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -114,7 +114,7 @@
           <tr ng-if="!basqueteFeminino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in basqueteFeminino | filter:searchBasqueteFem track by $index">
+          <tr ng-repeat="nome in basqueteFeminino | orderBy | filter:searchBasqueteFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -133,7 +133,7 @@
           <tr ng-if="!futebolFeminino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in futebolFeminino | filter:searchFutebolFem track by $index">
+          <tr ng-repeat="nome in futebolFeminino | orderBy | filter:searchFutebolFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -171,7 +171,7 @@
           <tr ng-if="!handballFeminino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in handballFeminino | filter:searchHandFem track by $index">
+          <tr ng-repeat="nome in handballFeminino | orderBy | filter:searchHandFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
@@ -190,7 +190,7 @@
           <tr ng-if="!individuaisFeminino.length">
             <td><b>Nenhum resultado</b></td>
           </tr>
-          <tr ng-repeat="nome in individuaisFeminino | filter:searchIndividuaisFem track by $index">
+          <tr ng-repeat="nome in individuaisFeminino | orderBy | filter:searchIndividuaisFem track by $index">
             <td>{{nome}}</td>
           </tr>
         </tbody>
