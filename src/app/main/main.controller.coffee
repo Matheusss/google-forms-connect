@@ -39,7 +39,7 @@ angular.module 'connectForms'
           
           # Kits
           $scope.kits = _.filter  $scope.entries, (entry) ->
-            return entry.gsx$nomedocomprador.$t isnt '' && (entry.gsx$bata.$t || entry.gsx$samba.$t)
+            return entry.gsx$nomedocomprador.$t isnt '' && (entry.gsx$bata.$t && entry.gsx$samba.$t)
           $scope.kits = _.map $scope.kits, (entry) ->
            return {
              nome  : entry.gsx$nomedocomprador.$t
