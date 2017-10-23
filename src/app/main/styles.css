@@ -27,7 +27,7 @@ hr {
     margin: 40px 0;
 }
 
-.table thead tr, .table tbody tr {
+.table-fixed thead tr, .table-fixed tbody tr {
     width: 100%;
     display: block;
 }

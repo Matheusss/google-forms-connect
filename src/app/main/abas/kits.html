@@ -1,0 +1,29 @@
+<button style="margin-top:20px;" class="btn btn-primary" ng-click="methods.export('kits')">Exportar para excel</button>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Kits</h3>
+			<input ng-model="searchKits" placeholder="Pesquisar...">
+			<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<th>Nome</th>
+                        <th>Bata</th>
+                        <th>Samba</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-if="!kits.length">
+						<td><b>Nenhum resultado</b></td>
+					</tr>
+					<tr ng-repeat="pessoa in kits | orderBy: 'nome' | filter:searchKits track by $index">
+						<td>{{pessoa.nome}}</td>
+                        <td>{{pessoa.bata}}</td>
+                        <td>{{pessoa.samba}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div ng-include="'app/main/excel/kits.html'"></div>

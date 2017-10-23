@@ -36,6 +36,17 @@ angular.module 'connectForms'
 
           $scope.entries = result.data.feed.entry
 
+          
+          # Kits
+          $scope.kits = _.filter  $scope.entries, (entry) ->
+            return entry.gsx$nomedocomprador.$t isnt '' && (entry.gsx$bata.$t || entry.gsx$samba.$t)
+          $scope.kits = _.map $scope.kits, (entry) ->
+           return {
+             nome  : entry.gsx$nomedocomprador.$t
+             samba : entry.gsx$samba.$t
+             bata  : entry.gsx$bata.$t
+           }
+
           # Pacote onibus
           $scope.pacoteOnibus = _.filter  $scope.entries, (entry) ->
             return entry.gsx$pacotebusão.$t is 'Sim'
