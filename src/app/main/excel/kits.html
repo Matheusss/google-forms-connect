@@ -1,0 +1,34 @@
+<div style="visibility:hidden;">
+	<div id="exportable-kits" style="display:inline-block;">
+		<table>
+			<thead>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+            <table class="table table-bordered table-striped">
+    					<thead>
+    						<tr>
+    							<th>Nome</th>
+                  <th>Bata</th>
+                  <th>Samba</th>
+    						</tr>
+    					</thead>
+    					<tbody>
+    						<tr ng-if="!kits.length">
+    							<td><b>Nenhum resultado</b></td>
+    						</tr>
+    						<tr ng-repeat="pessoa in kits | orderBy: 'nome' | filter:searchKits track by $index">
+    							<td>{{pessoa.nome}}</td>
+                  <td>{{pessoa.bata}}</td>
+                  <td>{{pessoa.samba}}</td>
+    						</tr>
+    					</tbody>
+    				</table>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
