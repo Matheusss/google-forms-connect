@@ -1,0 +1,32 @@
+<div style="visibility:hidden;">
+	<div id="exportable-sofesta" style="display:inline-block;">
+		<table>
+			<thead>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+            <table class="table table-bordered table-striped">
+    					<thead>
+    						<tr>
+    							<th>Nome</th>
+                  <th>Rg</th>
+    						</tr>
+    					</thead>
+    					<tbody>
+    						<tr ng-if="!kits.length">
+    							<td><b>Nenhum resultado</b></td>
+    						</tr>
+    						<tr ng-repeat="pessoa in soFesta | orderBy: 'nome' | filter:search track by $index">
+    							<td>{{pessoa.nome}}</td>
+                  <td>{{pessoa.rg}}</td>
+    						</tr>
+    					</tbody>
+    				</table>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
